@@ -1,12 +1,12 @@
-# Pylit - Automatic Input Generator
+# py_lit - Automatic Input Generator
 
 [![Python Version](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![License](https://img.shields.io/badge/license-Apache%202.0-green.svg)](https://opensource.org/licenses/Apache-2.0)
-[![Dependencies](https://img.shields.io/badge/dependencies-pydantic%20%7C%20streamlit-blue.svg)](https://github.com/f4hy/pylit/blob/main/pyproject.toml)
+[![Dependencies](https://img.shields.io/badge/dependencies-pydantic%20%7C%20streamlit-blue.svg)](https://github.com/f4hy/py_lit/blob/main/pyproject.toml)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
 
-A Python package that automatically generates Streamlit inputs from your Pydantic models. Pylit makes it easy to create interactive web forms that validate input against your Pydantic schemas, with zero additional code.
+A Python package that automatically generates Streamlit inputs from your Pydantic models. py_lit makes it easy to create interactive web forms that validate input against your Pydantic schemas, with zero additional code.
 
 ## Features
 
