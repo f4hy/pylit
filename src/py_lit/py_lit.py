@@ -1,6 +1,7 @@
 from typing import Any, Dict, Type, TypeVar, get_type_hints
-
+from datetime import datetime
 import streamlit as st
+
 from pydantic import BaseModel, Field
 
 T = TypeVar("T", bound=BaseModel)
@@ -14,7 +15,6 @@ def get_field_type(field: Any) -> str:
 def render_field(field_name: str, field: Any, value: Any = None) -> Any:
     """Render a single field based on its type."""
     field_type = get_field_type(field)
-    
     if "str" in field_type:
         return st.text_input(field_name, value=value or "")
     elif "int" in field_type:
@@ -29,6 +29,8 @@ def render_field(field_name: str, field: Any, value: Any = None) -> Any:
     elif "dict" in field_type:
         st.write(f"Dict field: {field_name}")
         return st.text_area(field_name, value=value or "")
+    elif "date" in field_type:
+        return st.date_input(field_name, value=value or datetime.now())
     else:
         return st.text_input(field_name, value=value or "")
 
@@ -56,7 +58,6 @@ def pydantic_inputs(model_class: Type[T], title: str = None) -> T:
     for field_name, field in fields.items():
         # Get field description if available
         description = field.description or ""
-        
         # Add field label with description if available
         label = f"{field_name}"
         if description:
