@@ -3,7 +3,7 @@ from datetime import datetime
 from typing import List, Dict, Optional
 from pydantic import BaseModel, Field, conint, confloat
 
-from .py_lit import pydantic_inputs
+from .streamdantic import pydantic_inputs
 
 # Example Pydantic models
 class LLMSettings(BaseModel):

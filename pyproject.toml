@@ -1,5 +1,5 @@
 [project]
-name = "py_lit"
+name = "streamdantic"
 version = "0.1.0"
 description = "A Python package that automatically generates Streamlit inputs from your Pydantic models"
 authors = [{ name = "Brendan Fahy", email = "bmfahy@gmail.com" }]
@@ -16,7 +16,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/py_lit"]
+packages = ["src/streamdantic"]
 
 [tool.hatch.metadata]
 allow-direct-references = true 
